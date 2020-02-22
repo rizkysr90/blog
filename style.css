@@ -1,0 +1,122 @@
+body,h1,ul,h2,h3,p {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+header {
+  
+}
+/* Layout */
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    height: 80%;
+}
+
+.banner {
+    width: 100%;
+    height: 18.75rem; /*300px*/
+    
+}
+.typography-header {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* Styling Content */
+.text-logo {
+    font-family: 'Parisienne', 'Roboto','Helvetica' ;
+    color: #121212;
+    font-size: 2em;
+    margin: 10px;
+}
+
+.navbar a {
+    font-size: 1.2em;
+    color: #121212;
+    font-family: 'Montserrat','Roboto', 'Helvetica' ;
+    padding: .625em .9375em;
+}
+
+h1,h2,h3 {
+    color: #2b2d38;
+}
+.typography-header h2 {
+    font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.125em; /*34px*/
+    margin-top: 1.17em; /*40px*/
+}
+
+.typography-header p {
+    margin-top: 1.1em; /*20px*/
+    font-size: 1.125em; /*18px*/
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    color: #555a70;
+    max-width: 350px;/*350px*/
+}
+
+.content {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.content img {
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
+    transform-origin: bottom;
+    animation: bounce 2s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-30px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.notes ul{
+    list-style-type: decimal;
+    padding:10px 25px;
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    color: #555a70;
+    font-weight: bold;
+}
+
+.notes a {
+    color: #555a70;
+}
+
+.notes li:nth-child(2) {
+    margin-top: 10px;    
+}
+
+
