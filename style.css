@@ -1,4 +1,7 @@
-body,h1,ul,h2,h3,p {
+* {
+    box-sizing: border-box;
+}
+body,h1,ul,h2,h3,h4,p {
     margin: 0;
 }
 
@@ -34,7 +37,7 @@ main {
 
 .banner {
     width: 100%;
-    height: 18.75rem; /*300px*/
+    height: 15.75rem; /*252px*/
     
 }
 .typography-header {
@@ -43,6 +46,70 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+.content {
+    width: 80%;
+    height: 100vh;
+}
+.text-style {
+    margin-bottom: 30px;
+}
+.art-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  
+}
+
+.art-container .photo-horizontal-1 {
+    width: 60%;
+    height: 100px;
+}
+.art-container .photo-horizontal-3 {
+    width: 60%;
+    height: 100px;
+}
+.position1 {
+    position: absolute;
+    top: 110px;
+}
+.position-content {
+    position: absolute;
+    margin-top: 20px;
+}
+.position2 {
+    top: 220px;
+    display: none;
+}
+.sideinfo {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+.side-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100px;
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    color: #555a70;
+    padding: 5px;
+    text-align: center;
+    font-size: .8em;
+}
+.side-text span {
+    font-size: .7em;
+}
+
+.desc-box{ 
+    display: table;
+   
+}
+.position1 img {
+    order: 1;
 }
 /* Styling Content */
 .text-logo {
@@ -78,31 +145,6 @@ h1,h2,h3 {
     max-width: 350px;/*350px*/
 }
 
-.content {
-    width: 80%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.content img {
-    width: 50px;
-    height: 50px;
-    align-self: flex-start;
-    transform-origin: bottom;
-    animation: bounce 2s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
-}
-
-@keyframes bounce {
-    0%   { transform: scale(1,1)      translateY(0); }
-    10%  { transform: scale(1.1,.9)   translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-30px); }
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    57%  { transform: scale(1,1)      translateY(-7px); }
-    64%  { transform: scale(1,1)      translateY(0); }
-    100% { transform: scale(1,1)      translateY(0); }
-}
-
 .notes ul{
     list-style-type: decimal;
     padding:10px 25px;
@@ -111,6 +153,19 @@ h1,h2,h3 {
     font-weight: bold;
 }
 
+.typo-notes {
+    font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    position: relative;
+    align-self: flex-start;
+}
+.content .first-row {
+    letter-spacing: 10px;
+}
+
+.content .second-row {
+    letter-spacing: 8px;
+}
 .notes a {
     color: #555a70;
 }
