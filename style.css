@@ -65,8 +65,7 @@ main {
 .size-img {
     width: 200px;
     height: 100%;
-     
-
+    border-radius: 5%;
 }
 .art-container .photo-horizontal-1 {
  
@@ -113,6 +112,7 @@ main {
     font-size: .8em;
     position: relative;
     overflow: hidden;
+    margin-left: 10px;
 }
 .side-text span {
     font-size: .7em;
@@ -213,5 +213,9 @@ background-size: cover;
 @media (max-width:321px) {
     .content {
         width: 90%;
+    }
+    
+    .text-style {
+        margin-left: 5%;
     }
 }
