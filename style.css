@@ -70,16 +70,20 @@ main {
 }
 .art-container .photo-horizontal-1 {
  
-    background: black url(img/post1.jpg) center no-repeat;
+    background:
+                linear-gradient(to top, rgb(213,236,243),transparent 40%),
+                url(img/post1.jpg) center no-repeat;
     background-size: cover; 
+    transition: linear-background .5s cubic-bezier(.24,.56,.58,.78);
      
 }
 .art-container .photo-horizontal-3 {
-    background: black url(img/post2.jpg) center no-repeat;
+    background:  linear-gradient(to top, rgb(213,236,243),transparent 30%),
+                url(img/post2.jpg) center no-repeat;
     background-size: cover; 
+    transition: linear-background .5s cubic-bezier(.24,.56,.58,.78);
 }
 .position1 {
-    position: absolute;
     top: 110px;
 }
 .position-content {
@@ -94,7 +98,7 @@ main {
     display: flex;
     flex-direction: row;
     height: 120px;
-    border: 5px solid rgba(18, 18, 18, 70%);
+    
 }
 .side-text {
     display: flex;
@@ -107,6 +111,8 @@ main {
     padding: 5px;
     text-align: center;
     font-size: .8em;
+    position: relative;
+    overflow: hidden;
 }
 .side-text span {
     font-size: .7em;
@@ -115,9 +121,6 @@ main {
 .desc-box{ 
     display: table;
    
-}
-.position1 img {
-    order: 1;
 }
 /* Styling Content */
 .text-logo {
@@ -175,3 +178,40 @@ h1,h2,h3 {
     letter-spacing: 8px;
 }
 
+.side-text a {
+    align-self: center;
+    width: 80%;
+    position: absolute;
+    bottom:0;
+    padding: 5px 7px;
+    font-size: .8em;
+    font-weight: bold;
+    background-color: rgb(213,236,243);
+    color: #121212;
+    border-radius: 5%;
+    transition: background-color .5s cubic-bezier(.24,.56,.58,.78);
+}
+
+.side-text a:hover {
+    background-color: #fbe786;
+}
+
+.photo-horizontal-1:hover {
+    background:
+    linear-gradient(to top, #fbe786,transparent 40%),
+    url(img/post1.jpg) center no-repeat;
+background-size: cover; 
+}
+
+.photo-horizontal-3:hover {
+    background:
+    linear-gradient(to top, #fbe786,transparent 40%),
+    url(img/post2.jpg) center no-repeat;
+background-size: cover; 
+}
+
+@media (max-width:321px) {
+    .content {
+        width: 90%;
+    }
+}
