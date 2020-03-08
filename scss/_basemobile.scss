@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
+%center {
+    text-align: center;
+}
+
 body,h1,ul,h2,h3,h4,p,a {
     margin: 0;
 }
@@ -81,7 +86,7 @@ nav {
     font-style: italic;
     font-size: 2.8em; /*34px*/
     margin-top: .4em; /*40px*/
-    text-align:center;
+    @extend %center;
 }
 
 .typography-header p {
@@ -89,7 +94,7 @@ nav {
     font-size: 1.4em; /*18px*/
     font-family:'Montserrat', Arial, Helvetica, sans-serif;
     color: $paragraph-color;
-    text-align: center;
+    @extend %center;
 }
 input#theme-switch {
     display: none;
@@ -106,6 +111,7 @@ input#theme-switch {
     position: absolute;
     left: 15px;
 }
+
 .switch-label::before {
     content: $dark-mode;   
     font-size: 24px;
@@ -135,6 +141,11 @@ input#theme-switch {
     }
     p {
         @extend %dark-text;
+    }
+    .switch-label::before {
+        content: $light-mode;   
+        font-size: 24px;
+    
     }
 }
 
