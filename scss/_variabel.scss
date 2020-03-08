@@ -1,0 +1,25 @@
+/* Color */
+$header-color: #2b2d38; /* Black darken */
+$paragraph-color:#555a70;
+
+/* Switch Mode Color */
+ /* Light mode */
+ $light-text: #222430;
+ $light-bg: #f7f7f7;
+ $light-theme: #d34a97;
+
+ /* Dark mode */
+ $dark-text: #f7f7f7;
+ $dark-bg: #121212;
+ $dark-theme: #bd93f9;
+
+ /* Switch Icons */
+ $dark-mode: "🌚";
+ $light-mode:"🌝";
+
+ /* Switch Text */
+ $switch-dark: "Dark Mode ?";
+ $switch-light: "Light Mode ?";
+
+ /* Icon Size */
+ $icon-size: 50px;

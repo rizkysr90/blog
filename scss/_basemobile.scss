@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+body,h1,ul,h2,h3,h4,p,a {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+/* Layout */
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+main {
+    height: 80%;
+}
+h1,h2,h3 {
+    color: $header-color ;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+        li:first-child {
+            font-size: .8rem;
+            font-weight: bold;
+            margin-top: .2rem;
+        }
+            a {
+                font-size: 1.2em;
+                color: #121212;
+                font-family: 'Montserrat','Roboto', 'Helvetica' ;
+                padding: .625em .9375em;
+                text-decoration: none;
+            }
+}
+.text-logo {
+    font-family: 'Parisienne', 'Roboto','Helvetica' ;
+    color: #121212;
+    font-size: 2em;
+    margin: 10px;
+}
+/* Banner */
+.banner {
+    width: 100%;
+    height: 18rem; /*252px 15.75rem*/
+    display: flex;
+}
+.typography-header {
+    width: 90%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+.bg-container { /* Rounded pic for mobile */
+    align-self: center;
+    order: -1;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    background: white url(img/banner.jpg)  top 50% center no-repeat ;
+    background-size: cover;
+    
+}
+.typography-header h2 {
+    font-family:'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.8em; /*34px*/
+    margin-top: .4em; /*40px*/
+    text-align:center;
+}
+
+.typography-header p {
+    margin-top: .4em; /*20px*/
+    font-size: 1.4em; /*18px*/
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    color: $paragraph-color;
+    text-align: center;
+}
+input#theme-switch {
+    display: none;
+}
+.size {
+    min-width: 100vh;
+    min-height: 100vh;
+}
+#page {
+    min-height: 100vh;
+}
+.switch-label {
+    display: flex;
+    position: absolute;
+    left: 15px;
+}
+.switch-label::before {
+    content: $dark-mode;   
+    font-size: 24px;
+
+}
+.theme-switch:checked ~ #page {
+    background-color: $dark-bg;
+    .bg-container {
+        background: linear-gradient(to right, $dark-bg,transparent 40%),
+        linear-gradient(to left, $dark-bg,transparent 40%),
+        linear-gradient(to top, $dark-bg,transparent 40%),
+        linear-gradient(to bottom, $dark-bg,transparent 40%),
+        white url(img/banner.jpg)  top 50% center no-repeat;
+        background-size: cover;
+    }
+    %dark-text {
+        color:$dark-text;
+    }
+    .text-logo {
+        @extend %dark-text;
+    }
+    .dark {
+        @extend %dark-text;
+    }
+    h2 {
+        @extend %dark-text;
+    }
+    p {
+        @extend %dark-text;
+    }
+}
+
+
